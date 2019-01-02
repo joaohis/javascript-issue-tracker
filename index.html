@@ -12,10 +12,10 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" />
 
-<title></title>
+<title>JavaScript Issue Tracker</title>
 
 </head>
-<body>
+<body onload="fetchIssues()">
 
 <div class="container">
 	<h1>JavaScript Issue Tracker</h1>
@@ -24,7 +24,7 @@
 		<div class="col-12">
 			<p class="box__title">Add new issue:</p>
 
-			<form>
+			<form id="add-issue">
 				<div class="form-group">
 					<label for="description"><strong>Description</strong></label>
 					<input class="form-control" id="description" type="text">
@@ -44,32 +44,18 @@
 					<input class="form-control" id="assigned-to" type="text">
 				</div>
 
-				<a class="btn btn-primary" id="add" href="#">Add</a>
+				<button class="btn btn-primary" type="submit">Add</button>
 			</form>	
 		</div>
 	</div>
 
-	<div class="box row">
-		<div class="col-12">
-			<p>Issue ID: 0000-0000-00000-00000</p>
-
-			<span class="badge badge-warning">Open</span>
-			<span class="badge badge-primary">Closed</span>
-
-			<p>
-				<span class="box__title">Issue title</span><br>
-				<i class="icon ion-md-alarm"></i> Severity <i class="icon ion-md-person"></i> Assigned To
-			</p>
-
-			<a class="btn btn-success" id="close" href="#">Close</a>
-			<a class="btn btn-danger" id="delete" href="#">Delete</a>
-		</div>
-	</div>
+	<div id="issues"></div>
 </div>
 
 <!-- Scripts -->
 <script src="vendor/components/jquery/jquery.min.js"></script>
 <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
