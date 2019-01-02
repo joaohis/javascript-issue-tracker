@@ -1,0 +1,19 @@
+h1 {
+	font-weight: 600;
+}
+
+.box {
+	background-color: hsl(0, 0%, 95%);
+	padding-bottom: 16px;
+	padding-top: 36px;
+	border-radius: 10px;
+}
+
+.box__title {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.icon {
+	font-size: 20px;
+}
